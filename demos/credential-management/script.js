@@ -11,7 +11,7 @@ if (navigator.credentials) {
     var section = document.createElement('section');
     // section.innerHTML = "<p><code>navigator.credentials</code> is available, but will only work in a secure context. Try <a href='https://w3c.github.io/webappsec/demos/credential-management/'>visiting this page over HTTPS</a>!</p>";
     section.innerHTML = "<p><code>PhoneNumberCredential</code> is available.</p>";
-    section.classList.toggle('warning');
+    section.classList.toggle('success');
     document.body.appendChild(section);
   } else {
     var section = document.createElement('section');
