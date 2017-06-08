@@ -35,7 +35,7 @@ section.signedout, section.signedin {
   display: block;
 }
 
-.signedin section.signedin {
+.signedin section.signedin, .success {
   border: 1px solid #999;
   background: #66FF66;
   margin: 0.25em 0;
