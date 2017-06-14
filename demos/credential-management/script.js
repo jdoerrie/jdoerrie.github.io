@@ -9,9 +9,11 @@ if (navigator.credentials) {
 
   if (window.PhoneNumberCredential) {
     var section = document.createElement('section');
-    // section.innerHTML = "<p><code>navigator.credentials</code> is available, but will only work in a secure context. Try <a href='https://w3c.github.io/webappsec/demos/credential-management/'>visiting this page over HTTPS</a>!</p>";
     section.innerHTML = "<p><code>PhoneNumberCredential</code> is available.</p>";
     section.classList.toggle('success');
+    new PhoneNumberCredential({id: '1234'}).getToken().then(token => {
+      section.innerHTML += '<p>Token: <code>' + token + '</code></p>';
+    });
     document.body.appendChild(section);
   } else {
     var section = document.createElement('section');
